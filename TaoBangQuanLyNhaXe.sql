@@ -527,7 +527,7 @@ AS
 BEGIN
     UPDATE LoTrinh
     SET TenLoTrinh = @TenLoTrinh,
-        DiemXuatPhat = @DienXuatPhat,
+        DiemXuatPhat = @DiemXuatPhat,
         DiemKetThuc = @DiemKetThuc,
         Mota = @Mota,
 		TrangThai = @TrangThai
