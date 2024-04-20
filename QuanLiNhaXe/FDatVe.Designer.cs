@@ -182,7 +182,8 @@
             this.txtsoluongve.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtsoluongve.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtsoluongve.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtsoluongve.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtsoluongve.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtsoluongve.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
             this.txtsoluongve.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtsoluongve.Location = new System.Drawing.Point(694, 30);
             this.txtsoluongve.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -305,7 +306,6 @@
             this.cbGuiHang.UncheckedState.BorderRadius = 0;
             this.cbGuiHang.UncheckedState.BorderThickness = 0;
             this.cbGuiHang.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.cbGuiHang.CheckedChanged += new System.EventHandler(this.cbGuiHang_CheckedChanged);
             // 
             // guna2Button1
             // 

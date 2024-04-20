@@ -217,30 +217,7 @@ BEGIN
 END;
 go
 --trigger kiểm tra xe
-CREATE TRIGGER trg_CheckXe ON Xe FOR INSERT, UPDATE
-AS
-BEGIN
-	IF EXISTS ( SELECT * FROM inserted WHERE TRIM(LoaiXe) = '')
-	BEGIN
-		RAISERROR(N'Loại xe không được để trống.',16,1)
-		ROLLBACK TRANSACTION
-		RETURN
-	END
 
-	IF EXISTS ( SELECT * FROM inserted WHERE TRIM(BienSoXe) = '')
-	BEGIN
-		RAISERROR(N'Biển số xe không được để trống.',16,1)
-		ROLLBACK TRANSACTION
-		RETURN
-	END
-
-	IF EXISTS ( SELECT * FROM inserted WHERE TRIM(KhongGianHamChua) <= 0 )
-	BEGIN
-		RAISERROR(N'Không gian hầm chứa của xe không được bé hơn 0',16,1)
-		ROLLBACK TRANSACTION
-		RETURN
-	END
-END
 go
 --kiểm tra trùng số diện thoại tài xế
 CREATE TRIGGER trg_TrungSoDienThoaiTaiXe ON dbo.TaiXe AFTER insert,update
@@ -449,48 +426,6 @@ BEGIN
 		WHERE MaTaiXe = @MaTaiXe
 END
 go
---Thêm Xe
-CREATE PROCEDURE ThemXe
-	@MaXe INT,
-    @BienSoXe NVARCHAR(20),
-    @LoaiXe NVARCHAR(50) ,
-    @TrangThai NVARCHAR(50) ,
-	@DoTai FLOAT, 
-	@KhongGianHamChua NVARCHAR(30) ,
-	@SoGhe INT 
-AS
-BEGIN
-	IF EXISTS (SELECT 1 FROM Xe WHERE Xe.MaXe = @MaXe)
-	BEGIN
-		PRINT N'Xe đã tồn tại.'
-		RETURN;
-	END
-	INSERT INTO Xe(MaXe,BienSoXe,LoaiXe,TrangThai,DoTai,KhongGianHamChua,SoGhe)
-	VALUES(@MaXe,@BienSoXe,@LoaiXe,@TrangThai,@DoTai,@KhongGianHamChua,@SoGhe);
-END;
-go
---Xoa Xe
-CREATE PROCEDURE XoaXe
-	@MaXe INT
-AS
-BEGIN
-	DELETE FROM Xe WHERE MaXe = @MaXe;
-END;
-go
--- Sua Xe
-CREATE PROCEDURE SuaXe (@MaXe INT, @BienSoXe NVARCHAR(20), @LoaiXe NVARCHAR(50), @TrangThai NVARCHAR(50), @DoTai FLOAT, @KhongGianHamChua NVARCHAR(30), @SoGhe INT)
-AS
-BEGIN
-		UPDATE Xe
-		SET BienSoXe = @BienSoXe,
-			LoaiXe = @LoaiXe,
-			TrangThai = @TrangThai,
-			DoTai = @DoTai,
-			KhongGianHamChua = @KhongGianHamChua,
-			SoGhe = @SoGhe
-		WHERE MaXe = @MaXe
-END
-go
 -- Thêm Lộ trình 
 CREATE PROCEDURE ThemLoTrinh
 	@MaLoTrinh INT,
@@ -527,7 +462,7 @@ AS
 BEGIN
     UPDATE LoTrinh
     SET TenLoTrinh = @TenLoTrinh,
-        DiemXuatPhat = @DienXuatPhat,
+        DiemXuatPhat = @DiemXuatPhat,
         DiemKetThuc = @DiemKetThuc,
         Mota = @Mota,
 		TrangThai = @TrangThai
@@ -820,3 +755,93 @@ BEGIN
         THROW;
     END CATCH;
 END;
+
+
+go
+--Thêm Xe
+CREATE PROCEDURE ThemXe
+	@MaXe INT,
+    @BienSoXe NVARCHAR(20),
+    @LoaiXe NVARCHAR(50) ,
+    @TrangThai NVARCHAR(50) ,
+	@DoTai FLOAT, 
+	@KhongGianHamChua NVARCHAR(30) ,
+	@SoGhe INT 
+AS
+BEGIN
+	INSERT INTO Xe(MaXe,BienSoXe,LoaiXe,TrangThai,DoTai,KhongGianHamChua,SoGhe)
+	VALUES(@MaXe,@BienSoXe,@LoaiXe,@TrangThai,@DoTai,@KhongGianHamChua,@SoGhe);
+END;
+go
+--Xoa Xe
+CREATE PROCEDURE XoaXe
+	@MaXe INT
+AS
+BEGIN
+	DELETE FROM Xe WHERE MaXe = @MaXe;
+END;
+go
+-- Sua Xe
+CREATE PROCEDURE SuaXe (@MaXe INT, @BienSoXe NVARCHAR(20), @LoaiXe NVARCHAR(50), @TrangThai NVARCHAR(50), @DoTai FLOAT, @KhongGianHamChua NVARCHAR(30), @SoGhe INT)
+AS
+BEGIN
+		UPDATE Xe
+		SET BienSoXe = @BienSoXe,
+			LoaiXe = @LoaiXe,
+			TrangThai = @TrangThai,
+			DoTai = @DoTai,
+			KhongGianHamChua = @KhongGianHamChua,
+			SoGhe = @SoGhe
+		WHERE MaXe = @MaXe
+END
+
+CREATE TRIGGER trg_CheckXe ON Xe FOR INSERT, UPDATE
+AS
+BEGIN
+	IF EXISTS ( SELECT * FROM inserted WHERE TRIM(LoaiXe) = '')
+	BEGIN
+		RAISERROR(N'Loại xe không được để trống.',16,1)
+		ROLLBACK TRANSACTION
+		RETURN
+	END
+
+	IF EXISTS ( SELECT * FROM inserted WHERE TRIM(BienSoXe) = '')
+	BEGIN
+		RAISERROR(N'Biển số xe không được để trống.',16,1)
+		ROLLBACK TRANSACTION
+		RETURN
+	END
+
+	IF EXISTS ( SELECT * FROM inserted WHERE TRIM(KhongGianHamChua) <= 0 )
+	BEGIN
+		RAISERROR(N'Không gian hầm chứa của xe không được bé hơn 0',16,1)
+		ROLLBACK TRANSACTION
+		RETURN
+	END
+END
+
+CREATE TRIGGER trg_TrungMaXe ON Xe FOR INSERT, UPDATE
+AS
+BEGIN
+	IF EXISTS (
+		SELECT 1
+		FROM Xe
+		INNER JOIN inserted i ON i.MaXe = Xe.MaXe
+		GROUP BY i.MaXe
+		HAVING COUNT(*) > 1
+		)
+	BEGIN
+		RAISERROR (N'Mã xe đã tồn tại.',16,1);
+		ROLLBACK
+	END
+END
+
+
+CREATE TRIGGER trg_TrungBienSoXe ON Xe FOR INSERT, UPDATE
+AS
+BEGIN
+	SELECT 1
+	FROM Xe
+	INNER JOIN inserted i ON i.BienSoXe = Xe.BienSoXe
+	GROUP BY i.BienSoXe
+END

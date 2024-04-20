@@ -214,7 +214,6 @@
             this.cbbChonXe.Name = "cbbChonXe";
             this.cbbChonXe.Size = new System.Drawing.Size(111, 36);
             this.cbbChonXe.TabIndex = 144;
-            this.cbbChonXe.SelectedIndexChanged += new System.EventHandler(this.cbbChonXe_SelectedIndexChanged);
             // 
             // cbbChonTaiXe
             // 
@@ -231,7 +230,6 @@
             this.cbbChonTaiXe.Name = "cbbChonTaiXe";
             this.cbbChonTaiXe.Size = new System.Drawing.Size(111, 36);
             this.cbbChonTaiXe.TabIndex = 145;
-            this.cbbChonTaiXe.SelectedIndexChanged += new System.EventHandler(this.cbbChonTaiXe_SelectedIndexChanged);
             // 
             // txtTenTaiXe
             // 
@@ -271,7 +269,6 @@
             this.cbbLoTrinh.Name = "cbbLoTrinh";
             this.cbbLoTrinh.Size = new System.Drawing.Size(111, 36);
             this.cbbLoTrinh.TabIndex = 147;
-            this.cbbLoTrinh.SelectedIndexChanged += new System.EventHandler(this.cbbLoTrinh_SelectedIndexChanged);
             // 
             // txtTenLoTrinh
             // 
@@ -315,7 +312,6 @@
             this.cbbTrangThai.Name = "cbbTrangThai";
             this.cbbTrangThai.Size = new System.Drawing.Size(243, 36);
             this.cbbTrangThai.TabIndex = 149;
-            this.cbbTrangThai.SelectedIndexChanged += new System.EventHandler(this.cbbTrangThai_SelectedIndexChanged);
             // 
             // txtSoGheTrong
             // 
@@ -424,7 +420,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FChuyenDi";
             this.Text = "FChuyenDi";
-            this.Load += new System.EventHandler(this.FChuyenDi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvChuyenDi)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

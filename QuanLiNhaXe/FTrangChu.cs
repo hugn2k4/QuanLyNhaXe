@@ -97,5 +97,16 @@ namespace QuanLiNhaXe
             form.Show();
             form.BringToFront();
         }
+
+        private void btnTrangchu_Click(object sender, EventArgs e)
+        {
+            FThongKe form = new FThongKe();
+            pnlTrangChu.Controls.Clear();
+            form.TopLevel = false;
+            form.Dock = DockStyle.Fill;
+            pnlTrangChu.Controls.Add(form);
+            form.Show();
+            form.BringToFront();
+        }
     }
 }

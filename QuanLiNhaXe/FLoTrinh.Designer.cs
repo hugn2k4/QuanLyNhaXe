@@ -86,7 +86,6 @@
             this.dtgvLoTrinh.RowTemplate.Height = 24;
             this.dtgvLoTrinh.Size = new System.Drawing.Size(1082, 496);
             this.dtgvLoTrinh.TabIndex = 84;
-            this.dtgvLoTrinh.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvLoTrinh_CellContentClick);
             // 
             // lblBiensoXe
             // 

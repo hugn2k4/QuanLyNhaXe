@@ -116,6 +116,7 @@
             this.btnTrangchu.Size = new System.Drawing.Size(201, 91);
             this.btnTrangchu.TabIndex = 3;
             this.btnTrangchu.Text = "Trang chủ";
+            this.btnTrangchu.Click += new System.EventHandler(this.btnTrangchu_Click);
             // 
             // btnXe
             // 

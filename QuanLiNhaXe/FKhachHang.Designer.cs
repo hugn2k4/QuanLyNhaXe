@@ -49,7 +49,7 @@
             this.label3.Font = new System.Drawing.Font("Tahoma", 10.2F);
             this.label3.Location = new System.Drawing.Point(735, 18);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 17);
+            this.label3.Size = new System.Drawing.Size(67, 21);
             this.label3.TabIndex = 66;
             this.label3.Text = "Địa chỉ:";
             // 
@@ -59,7 +59,7 @@
             this.lblLoaixe.Font = new System.Drawing.Font("Tahoma", 10.2F);
             this.lblLoaixe.Location = new System.Drawing.Point(491, 18);
             this.lblLoaixe.Name = "lblLoaixe";
-            this.lblLoaixe.Size = new System.Drawing.Size(92, 17);
+            this.lblLoaixe.Size = new System.Drawing.Size(113, 21);
             this.lblLoaixe.TabIndex = 60;
             this.lblLoaixe.Text = "Số điện thoại:";
             // 
@@ -82,7 +82,7 @@
             this.lblBiensoXe.Font = new System.Drawing.Font("Tahoma", 10.2F);
             this.lblBiensoXe.Location = new System.Drawing.Point(189, 18);
             this.lblBiensoXe.Name = "lblBiensoXe";
-            this.lblBiensoXe.Size = new System.Drawing.Size(54, 17);
+            this.lblBiensoXe.Size = new System.Drawing.Size(65, 21);
             this.lblBiensoXe.TabIndex = 54;
             this.lblBiensoXe.Text = "Họ tên:";
             // 
@@ -92,7 +92,7 @@
             this.label1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(22, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 17);
+            this.label1.Size = new System.Drawing.Size(127, 21);
             this.label1.TabIndex = 70;
             this.label1.Text = "Mã khách hàng:";
             // 
@@ -106,7 +106,8 @@
             this.txtMaKhachHang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtMaKhachHang.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtMaKhachHang.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaKhachHang.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtMaKhachHang.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaKhachHang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
             this.txtMaKhachHang.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMaKhachHang.Location = new System.Drawing.Point(16, 43);
             this.txtMaKhachHang.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -127,7 +128,8 @@
             this.txtHoTen.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtHoTen.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtHoTen.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtHoTen.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtHoTen.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHoTen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
             this.txtHoTen.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtHoTen.Location = new System.Drawing.Point(184, 43);
             this.txtHoTen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -148,7 +150,8 @@
             this.txtSoDienThoai.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSoDienThoai.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSoDienThoai.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSoDienThoai.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSoDienThoai.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoDienThoai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
             this.txtSoDienThoai.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSoDienThoai.Location = new System.Drawing.Point(484, 43);
             this.txtSoDienThoai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -169,7 +172,8 @@
             this.txtDiaChi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtDiaChi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtDiaChi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDiaChi.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtDiaChi.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiaChi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
             this.txtDiaChi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDiaChi.Location = new System.Drawing.Point(726, 43);
             this.txtDiaChi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -233,7 +237,7 @@
             // 
             // FKhachHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1083, 704);

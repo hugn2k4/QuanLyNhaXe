@@ -89,6 +89,12 @@
     <Compile Include="FLoTrinh.Designer.cs">
       <DependentUpon>FLoTrinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="FThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FThongKe.Designer.cs">
+      <DependentUpon>FThongKe.cs</DependentUpon>
+    </Compile>
     <Compile Include="FTrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FLoTrinh.resx">
       <DependentUpon>FLoTrinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FThongKe.resx">
+      <DependentUpon>FThongKe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FTrangChu.resx">
       <DependentUpon>FTrangChu.cs</DependentUpon>

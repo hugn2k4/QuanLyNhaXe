@@ -22,7 +22,7 @@ namespace QuanLiNhaXe
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            try
+          try
             {
                 dbC.MoKetNoi();
                 SqlCommand cmd = new SqlCommand("ThemXe", dbC.getConnection);
@@ -39,25 +39,24 @@ namespace QuanLiNhaXe
                 {
                     MessageBox.Show("Thêm thành công!", "Thêm Xe", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoadXe();
+                  
                 }
-                else
+               /* else
                 {
                     MessageBox.Show("Thêm thất bại", "Thêm Xe", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                    dbC.DongKetNoi();
+                }*/
             }
-            catch (SqlException ex)
+            catch(SqlException ex)
             {
-                MessageBox.Show("Đã xảy ra lỗi khi thêm xe: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Đã xảy ra lỗi không mong muốn: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Đã xảy ra lỗi khi thêm xe:" + ex.Message, "Thêm xe", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
             finally
             {
                 dbC.DongKetNoi();
             }
-            
+
         }
 
         private void btnXoa_Click(object sender, EventArgs e)

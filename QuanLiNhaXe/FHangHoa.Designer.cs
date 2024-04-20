@@ -85,8 +85,6 @@
             this.dghanghoa.RowTemplate.Height = 24;
             this.dghanghoa.Size = new System.Drawing.Size(1079, 496);
             this.dghanghoa.TabIndex = 55;
-            this.dghanghoa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dghanghoa_CellContentClick);
-            this.dghanghoa.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dghanghoa_CellContentClick);
             // 
             // lblBiensoXe
             // 
